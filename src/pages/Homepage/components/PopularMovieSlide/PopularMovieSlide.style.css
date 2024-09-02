@@ -1,0 +1,14 @@
+.carousel-container {
+  overflow: hidden;
+  height: 440px;
+}
+
+.movies-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
