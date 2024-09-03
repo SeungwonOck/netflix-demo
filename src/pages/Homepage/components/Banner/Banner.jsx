@@ -1,6 +1,6 @@
 import React from 'react'
 import { Alert } from 'react-bootstrap'
-import { usePopularMoviesQuery } from '../../../../hooks/userPopularMovies'
+import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies'
 import "./Banner.style.css"
 
 const Banner = () => {
