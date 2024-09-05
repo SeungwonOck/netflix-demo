@@ -45,6 +45,14 @@ const MoviePage = () => {
     setSelectedSort(e.target.value);
   }
 
+  useEffect(() => {
+    setQuery({});
+  }, [])
+
+  useEffect(() => {
+    setPage(1);
+  }, [keyword])
+
   const filteredMovies = query.get("genre")
     ? data?.results?.filter(movie => movie.genre_ids.includes(parseInt(query.get("genre"), 10)))
     : data?.results;
@@ -107,11 +115,17 @@ const MoviePage = () => {
         </Col>
         <Col lg={8} xs={12}>
           <Row className="movie-container">
-            {sortedMovies.map((movie, index) => (
-              <Col key={index} lg={4} xs={12}>
-            <MovieCard movie={movie} />
-              </Col>
-            ))}
+            {sortedMovies.length > 0 ? (
+              sortedMovies.map((movie, index) => (
+                <Col key={index} lg={4} xs={12}>
+                  <MovieCard movie={movie} />
+                </Col>
+              ))
+            ) : (
+              <div className="no-results-container">
+                <h2 className="no-results-message">Search results not found</h2>
+              </div>
+            )}
           </Row>
           <ReactPaginate
             nextLabel="next >"
