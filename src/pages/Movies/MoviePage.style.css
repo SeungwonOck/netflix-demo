@@ -93,11 +93,6 @@
   border: 1px solid #444 !important;
 }
 
-.page-item:disabled {
-  background-color: #555;
-  color: #fff;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .pagination {
