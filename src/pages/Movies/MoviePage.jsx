@@ -117,7 +117,7 @@ const MoviePage = () => {
           <Row className="movie-container">
             {sortedMovies.length > 0 ? (
               sortedMovies.map((movie, index) => (
-                <Col key={index} lg={4} xs={12}>
+                <Col key={index} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center">
                   <MovieCard movie={movie} />
                 </Col>
               ))
